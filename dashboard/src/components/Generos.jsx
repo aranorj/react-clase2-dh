@@ -1,11 +1,3 @@
-import avatar from '../assets/img/sniper.jpg'
-import trolls2 from '../assets/img/banner.jpg'
-import avatar2 from '../assets/img/avatar.jpg'
-import john from '../assets/img/john-wick.jpg'
-import sayen from '../assets/img/sayen.jpg'
-import shazam from '../assets/img/shazan.jpg'
-import elephant from '../assets/img/the-magicians-elephant.jpg'
-
 export default function generos(){
    return(
     <section className="content">
@@ -15,6 +7,7 @@ export default function generos(){
             aria-current="true">
             Listado de géneros de las películas
         </button>
+
         <button type="button" className="list-group-item list-group-item-action text-center">Acción</button>
         <button type="button" className="list-group-item list-group-item-action text-center">Avetura</button>
         <button type="button" className="list-group-item list-group-item-action text-center">Animación</button>
