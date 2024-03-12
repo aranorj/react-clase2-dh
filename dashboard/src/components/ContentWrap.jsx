@@ -4,6 +4,8 @@ import Estrenos from './Estrenos'
 import Maspopulares from './Maspopulares'
 import GenresInDb from './GenresInDb'
 
+import Contador from "./Contador";
+
 
 
 export default function ContentWrap(){
@@ -13,7 +15,8 @@ export default function ContentWrap(){
          <Estadisticas/>
         <Estrenos/>
         <Maspopulares/>
-        <GenresInDb/>        
+        <GenresInDb/>  
+        <Contador />      
        
     </main>
     )
