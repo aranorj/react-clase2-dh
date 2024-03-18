@@ -1,7 +1,5 @@
 import MoviesList from "./MoviesList";
 import { Component } from "react";
-import MenuWrap from "../MenuWrap";
-import SearchWrap from "../SearchWrap";
 
 import style from "./Movies.module.css";
 
@@ -9,9 +7,7 @@ class Movies extends Component {
   render() {
     return (
       <>
-        <div className="dashboard">
-          <SearchWrap />
-          <MenuWrap />
+ 
           <main className="content-wrap">
             <section className="content">
               <h2 className="mt-3">All the movies in the database</h2>
@@ -31,7 +27,7 @@ class Movies extends Component {
               </table>
             </section>
           </main>
-        </div>
+   
       </>
     );
   }

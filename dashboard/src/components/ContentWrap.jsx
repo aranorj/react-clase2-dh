@@ -1,39 +1,54 @@
-import PreSales from './PreSales/PreSales'
-import Statistics from './Statistics/Statistics.jsx'
-import Estrenos from './Estrenos/Estrenos.jsx'
-import GenresInDb from './GenresInDb'
-import MasPopulares from './MasPopulares/MasPopulares'
-import Contador from './Contador'
+import { Route, Routes } from "react-router-dom";
 
-export default function ContentWrap(){
-    return(
-        <main className="content-wrap">
-        <PreSales/>
-        <Statistics props={[
-            {
-                titulo: "Cantidad de estrenos",
-                cifra: 15,
-                icono: "bi bi-film",
-                colorIcono: "cornflowerblue"
-            },
-            {
-                titulo: "Categorias",
-                cifra: 12,
-                icono: "bi bi-tags-fill",
-                colorIcono: "orange"
-            },
-            {
-                titulo: "Total ventas",
-                cifra: 489.567,
-                icono: "bi bi-currency-dollar",
-                colorIcono:"green"
+import GenresInDb from "./GenresInDb";
+import Error404 from "./Error404";
+import GenreDetail from "./GenreDetail";
+import Movies from "./Movies/Movies";
+import MasPopulares from "./MasPopulares/MasPopulares";
+import Statistics from "./Statistics/Statistics";
+import PreSales from "./PreSales/PreSales";
+
+export default function ContentWrap() {
+  return (
+    <>
+      <main className="content-wrap">
+        <Routes>
+          <Route path="/" exact element={<PreSales />} />
+          <Route path="/genres" exact element={<GenresInDb />} />
+          <Route path="/genres/:id" element={<GenreDetail />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/maspopulares" element={<MasPopulares />} />
+          <Route
+            path="/statistics"
+            element={
+              <Statistics
+                props={[
+                  {
+                    titulo: "Cantidad de estrenos",
+                    cifra: 15,
+                    icono: "bi bi-film",
+                    colorIcono: "cornflowerblue",
+                  },
+                  {
+                    titulo: "Categorias",
+                    cifra: 12,
+                    icono: "bi bi-tags-fill",
+                    colorIcono: "orange",
+                  },
+                  {
+                    titulo: "Total ventas",
+                    cifra: 489.567,
+                    icono: "bi bi-currency-dollar",
+                    colorIcono: "green",
+                  },
+                ]}
+              />
             }
-        ]} />
-        <Estrenos/>
-        <GenresInDb/>   
-        <MasPopulares/> 
-        <Contador />      
-       
-    </main>
-    )
+          />
+          <Route component={Error404} />
+        </Routes>
+
+      </main>
+    </>
+  );
 }
