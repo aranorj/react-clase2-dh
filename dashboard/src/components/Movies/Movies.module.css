@@ -1,0 +1,12 @@
+.table{
+    border-color: rgb(54, 54, 54);
+    border-width: 1px;
+    border-style: solid;
+    width: 80%;
+    margin: auto;
+}
+
+
+.table tbody, td, tfoot, th, thead, tr {
+    border-width: 1px;
+}

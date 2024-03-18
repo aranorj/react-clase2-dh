@@ -1,0 +1,12 @@
+.infoboxes__icono{
+    font-size: 2.5rem;
+}
+
+button a {
+    color: black;
+    text-decoration: none;
+}
+
+button a:hover {
+    text-decoration: underline;
+}
