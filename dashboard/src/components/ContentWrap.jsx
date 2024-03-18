@@ -2,6 +2,8 @@ import PreSales from './PreSales/PreSales'
 import Statistics from './Statistics/Statistics.jsx'
 import Estrenos from './Estrenos/Estrenos.jsx'
 import GenresInDb from './GenresInDb'
+import MasPopulares from './MasPopulares/MasPopulares'
+import Contador from './Contador'
 
 export default function ContentWrap(){
     return(
@@ -18,7 +20,7 @@ export default function ContentWrap(){
                 titulo: "Categorias",
                 cifra: 12,
                 icono: "bi bi-tags-fill",
-                colorIcono: "red"
+                colorIcono: "orange"
             },
             {
                 titulo: "Total ventas",
@@ -28,7 +30,10 @@ export default function ContentWrap(){
             }
         ]} />
         <Estrenos/>
-        <GenresInDb/>
+        <GenresInDb/>   
+        <MasPopulares/> 
+        <Contador />      
+       
     </main>
     )
 }

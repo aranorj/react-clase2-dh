@@ -20,6 +20,7 @@ class GenresInDb extends Component{
             
         )
     }
+    
     constructor (){
         super();
         this.state ={
