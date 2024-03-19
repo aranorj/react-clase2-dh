@@ -2,13 +2,24 @@ import MoviesList from "./MoviesList";
 import { Component } from "react";
 import MenuWrap from "../MenuWrap";
 import SearchWrap from "../SearchWrap";
+import { useEffect, useState } from "react";
 
 import style from "./Movies.module.css";
 
-class Movies extends Component {
-  render() {
-    return (
-      <>
+
+
+function Movies(){
+  const [movies, setMovies] = useState([])
+
+  useEffect(
+    () => {
+      fetch("http://localhost:3030/movies")
+      .then((respuesta) => respuesta.json())
+      .then((peliculas) => setMovies(peliculas));
+    }, []
+  )
+  return(
+    <>
         <div className="dashboard">
           <SearchWrap />
           <MenuWrap />
@@ -25,7 +36,7 @@ class Movies extends Component {
                     <th>Duración</th>
                   </tr>
                 </thead>
-                {this.state.moviesList.map((movie) => (
+                {movies.map((movie) => (
                   <MoviesList movies={movie} key={movie.id} />
                 ))}
               </table>
@@ -33,21 +44,11 @@ class Movies extends Component {
           </main>
         </div>
       </>
-    );
-  }
+  )
 
-  constructor() {
-    super();
-    this.state = {
-      moviesList: [],
-    };
-  }
 
-  componentDidMount() {
-    fetch("http://localhost:3030/movies")
-      .then((respuesta) => respuesta.json())
-      .then((movies) => this.setState({ moviesList: movies }));
-  }
+
 }
+
 
 export default Movies;
