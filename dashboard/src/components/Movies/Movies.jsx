@@ -20,9 +20,6 @@ function Movies(){
   )
   return(
     <>
-        <div className="dashboard">
-          <SearchWrap />
-          <MenuWrap />
           <main className="content-wrap">
             <section className="content">
               <h2 className="mt-3">All the movies in the database</h2>
@@ -42,12 +39,8 @@ function Movies(){
               </table>
             </section>
           </main>
-          </div>
       </>
   )
-
-
-
 }
 
 
