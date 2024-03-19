@@ -9,7 +9,7 @@ import style from "./Movies.module.css";
 
 
 function Movies(){
-  const [movies, setMovies] = useState([])
+  const [movies, setMovies] = useState([]);
 
   useEffect(
     () => {
@@ -42,7 +42,7 @@ function Movies(){
               </table>
             </section>
           </main>
-        </div>
+          </div>
       </>
   )
 

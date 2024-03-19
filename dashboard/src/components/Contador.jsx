@@ -13,7 +13,7 @@ class Contador extends Component {
         })
     }
     componentDidMount(){
-        alert("empieza a recolectar MGs")
+        // alert("empieza a recolectar MGs")
     }
 
     componentDidUpdate(){
